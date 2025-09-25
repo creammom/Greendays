@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greendays</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 테일윈드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 스와이퍼 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="sec sec_1">
+          <div class="main_items">
+            <img src="/greendays_imgs/1_main_items.png" alt="">
+          </div>
+          <div class="logo">
+            <img src="/greendays_imgs/1_logo.png" alt="">
+          </div>
+          <div class="eco-friendly">
+            <img src="/greendays_imgs/1_eco-friendly.png" alt="">
+          </div>
+          <div class="eco-memo">
+            <img src="/greendays_imgs/1_eco-memo.png" alt="">
+          </div>
+          <div class="eco-triangle">
+            <img src="/greendays_imgs/1_eco-triangle.png" alt="">
+          </div>
+    </div>
+
+    <div class="sec sec_2"></div>
+
+    <style>
+      /* 라이브러리 */
+      .sec {
+        min-width: 1920px;
+        height: 950px;
+      }
+      .con {
+        width: 1450px;
+      }
+
+      /* 커스텀 */
+
+      /* 섹션1 시작 */
+      .sec_1 {
+        background: url(/greendays_imgs/1_bg.png) no-repeat center top / 100%;
+        position: relative;
+      }
+
+      .sec_1 .main_items {
+        width : 1400px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+       .sec_1 .logo {
+        position: absolute;
+        width : 200px;
+        left : 50%;
+        bottom : 10%;
+        transform: translateX(-50%);
+       }
+
+       .sec_1 .eco-friendly {
+        position: absolute;
+        left: 25%;
+        top: 60%;
+       }
+
+       .sec_1 .eco-memo {
+        position: absolute;
+        right: 15%;
+        top: 60%;
+       }
+
+       .sec_1 .eco-triangle {
+        position: absolute;
+        left: 37%;
+        top: 78%;
+       }
+      /* 섹션1 끝 */
+
+      /* 섹션2 시작 */
+      .sec_2 {
+        background: url(/greendays_imgs/임시4.png) no-repeat center top / 100%;
+      }
+      /* 섹션3 끝 */
+    </style>
+  </body>
+</html>
