@@ -19,7 +19,8 @@
   </head>
   <body>
     <div class="sec sec_1">
-          <div class="main_items">
+          <div class="con">
+            <div class="main_items">
             <img src="/greendays_imgs/1_main_items.png" alt="">
           </div>
           <div class="logo">
@@ -33,6 +34,9 @@
           </div>
           <div class="eco-triangle">
             <img src="/greendays_imgs/1_eco-triangle.png" alt="">
+          </div><div class="curved_line">
+            <img src="/greendays_imgs/1_curved_line.png" alt="">
+          </div>
           </div>
     </div>
 
@@ -41,18 +45,27 @@
     <style>
       /* 라이브러리 */
       .sec {
-        min-width: 1920px;
+        min-width : 1450px;
+        width: 1920px;
         height: 950px;
+        /* overflow-x: hidden; */
       }
+
       .con {
         width: 1450px;
-      }
+        height : 100%;
+        margin : 0 auto;
+        border: solid 1px red;
+      } 
 
       /* 커스텀 */
 
       /* 섹션1 시작 */
-      .sec_1 {
+      .sec_1{
         background: url(/greendays_imgs/1_bg.png) no-repeat center top / 100%;
+      }
+      
+      .sec_1 .con{
         position: relative;
       }
 
@@ -90,6 +103,12 @@
         position: absolute;
         left: 37%;
         top: 78%;
+       }
+
+       .sec_1 .curved_line {
+        position: absolute;
+        left: 27%;
+        top: 20%;
        }
       /* 섹션1 끝 */
 
