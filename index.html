@@ -23,6 +23,8 @@
     <!-- ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
     <!-- full page css -->
     <link
@@ -182,7 +184,7 @@
       </div>
     </section>
 
-    <div id="fullpage" class="sec_2 con-min-width">
+    <!-- <div id="fullpage" class="sec_2 con-min-width">
       <section class="section section-1">
         <div class="con">
           <div class="txt_box txt_box_right txt_box_1">
@@ -235,6 +237,7 @@
           </div>
         </div>
       </section>
+
       <section class="section section-3">
         <div class="con">
           <div class="txt_box txt_box_right txt_box_3">
@@ -286,16 +289,20 @@
           </div>
         </div>
       </section>
-    </div>
+    </div> -->
 
     <section class="sec_3">
       <div class="img_box">
-        <img src="Greendays_main_imgs/sec_3_BG임시.png" alt="" />
+        <img src="Greendays_main_imgs/sec_3_tree.png" alt="" />
+      </div>
+      <div class="line img_box">
+        <img src="Greendays_main_imgs/sec_3-4_line.png" alt="" />
       </div>
     </section>
 
     <section class="sec_4">
       <div class="con">
+        <!-- 텍스트 -->
         <div class="brand_service_box service_1">
           <div class="number img_box">
             <img src="Greendays_main_imgs/sec_4_num-1.png" alt="" />
@@ -367,6 +374,32 @@
               지속 가능성과 편리함, 두 가지를 모두 책임지겠습니다.
             </p>
           </div>
+        </div>
+
+        <!-- 이미지 -->
+        <div class="brand_serv_img brand_serv_img-1 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic1.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+        <div class="brand_serv_img brand_serv_img-2 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic2.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+        <div class="brand_serv_img brand_serv_img-3 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic3.png"
+            alt="브랜드소개이미지"
+          />
+        </div>
+        <div class="brand_serv_img brand_serv_img-4 img_box">
+          <img
+            src="Greendays_main_imgs/sec_4_pic4.png"
+            alt="브랜드소개이미지"
+          />
         </div>
       </div>
     </section>
@@ -1009,9 +1042,12 @@
 
               <div class="pr_txt">
                 <p>DETERGENT</p>
-                <p><span>[2000ml]</span>피치 프레시 | Peach</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>피치 프레시 | Peach</p>
+                </div>
                 <div class="line"></div>
-                <p>40,000원</p>
+                <p class="pr_price">40,000원</p>
               </div>
             </div>
 
@@ -1029,9 +1065,12 @@
 
               <div class="pr_txt">
                 <p>DETERGENT</p>
-                <p><span>[2000ml]</span>코튼퓨어 | Cotton</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>코튼퓨어 | Cotton</p>
+                </div>
                 <div class="line"></div>
-                <p>40,000원</p>
+                <p class="pr_price">40,000원</p>
               </div>
             </div>
 
@@ -1049,9 +1088,12 @@
 
               <div class="pr_txt">
                 <p>DETERGENT</p>
-                <p><span>[2000ml]</span>라일락 가든 | Lilac</p>
+                <div class="pr_name_box">
+                  <p>[2000ml]</p>
+                  <p>라일락 가든 | Lilac</p>
+                </div>
                 <div class="line"></div>
-                <p>40,000원</p>
+                <p class="pr_price">40,000원</p>
               </div>
             </div>
 
@@ -1069,9 +1111,12 @@
 
               <div class="pr_txt">
                 <p>DETERGENT</p>
-                <p><span>[2000ml]</span>화이트 블렌드 | White Musk</p>
+                <div class="pr_name_box">
+                  <span>[2000ml]</span>
+                  <p>화이트 블렌드 | White Musk</p>
+                </div>
                 <div class="line"></div>
-                <p>40,000원</p>
+                <p class="pr_price">40,000원</p>
               </div>
             </div>
           </div>
@@ -1363,7 +1408,13 @@
       .flex {
         display: flex;
       }
+
       /* 커스텀 */
+
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
 
       /* 헤더 시작 */
 
@@ -1534,6 +1585,13 @@
       /* 섹션3 시작 */
       .sec_3 {
         margin-top: 300vh;
+        position: relative;
+      }
+
+      .sec_3 .line {
+        position: absolute;
+        top: 90px;
+        left: 0;
       }
 
       /* 섹션3 끝 */
@@ -1548,6 +1606,10 @@
       }
 
       /* 브랜드 소개 텍스트 공통 설정 */
+
+      .sec_4 .con {
+        position: relative;
+      }
 
       .sec_4 .brand_service_box {
         display: flex;
@@ -1615,7 +1677,35 @@
         letter-spacing: -1.1px;
       }
 
-      /* 브랜드 소개 텍스트 개별 설정 */
+      /* 브랜드 소개 이미지 설정 */
+
+      .sec_4 .brand_serv_img {
+        position: absolute;
+      }
+
+      .sec_4 .brand_serv_img-1 {
+        width: 914px;
+        right: -200px;
+        top: 20px;
+      }
+
+      .sec_4 .brand_serv_img-2 {
+        width: 900px;
+        left: -350px;
+        top: 600px;
+      }
+
+      .sec_4 .brand_serv_img-3 {
+        width: 753px;
+        right: -200px;
+        top: 1300px;
+      }
+
+      .sec_4 .brand_serv_img-4 {
+        width: 1000px;
+        left: -300px;
+        top: 1850px;
+      }
 
       /* 섹션4 끝 */
 
